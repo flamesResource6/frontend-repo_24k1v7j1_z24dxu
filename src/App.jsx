@@ -6,14 +6,14 @@ import Contact from './components/Contact'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
       <main>
         <Hero />
         <Services />
         <Team />
         <Contact />
-        <footer className="py-10 border-t border-slate-200 text-center text-slate-600">
+        <footer className="py-10 border-t border-slate-800 text-center text-slate-400">
           © {new Date().getFullYear()} Flames Events • All rights reserved.
         </footer>
       </main>

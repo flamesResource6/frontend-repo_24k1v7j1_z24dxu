@@ -26,24 +26,24 @@ export default function Services() {
   }, [])
 
   return (
-    <section id="services" className="py-16 bg-slate-50">
+    <section id="services" className="py-16 bg-slate-900/40">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Our Services</h2>
-            <p className="text-slate-600 mt-2">Everything you need to bring your event to life</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Our Services</h2>
+            <p className="text-slate-300 mt-2">Everything you need to bring your event to life</p>
           </div>
         </div>
         {loading ? (
-          <p className="text-slate-500">Loading services...</p>
+          <p className="text-slate-400">Loading services...</p>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s) => (
-              <div key={s.id || s._id} className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
-                <div className="w-10 h-10 rounded bg-gradient-to-tr from-fuchsia-500 to-blue-600 mb-4" />
-                <h3 className="font-semibold text-slate-900">{s.title}</h3>
-                <p className="text-sm text-slate-600 mt-1">{s.description}</p>
-                <span className="inline-block mt-3 text-xs px-2 py-1 bg-slate-100 rounded">{s.category}</span>
+              <div key={s.id || s._id} className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:shadow-lg hover:shadow-slate-900/40 transition-shadow">
+                <div className="w-10 h-10 rounded bg-gradient-to-tr from-cyan-400 to-violet-600 mb-4" />
+                <h3 className="font-semibold text-white">{s.title}</h3>
+                <p className="text-sm text-slate-300 mt-1">{s.description}</p>
+                <span className="inline-block mt-3 text-xs px-2 py-1 bg-slate-800 text-slate-200 rounded">{s.category}</span>
               </div>
             ))}
           </div>
